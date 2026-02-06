@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">GPS Tracking</string>
+
+    <string-array name="vehicle_types">
+        <item>Car</item>
+        <item>Truck</item>
+        <item>Bus</item>
+    </string-array>
+    <string name="app_icon">Application Icon</string>
+    <string name="session_icon">Session Icon</string>
+    <string name="distance_icon">Distance Icon</string>
+    <string name="duration_icon">Duration Icon</string>
+    <string name="points_icon">Points Icon</string>
+    <string name="start_time_icon">Start Time Icon</string>
+    <string name="end_time_icon">End Time Icon</string>
+
+    <!-- Permissions -->
+    <string name="permission_location_rationale">Location permission is required to track your GPS coordinates.</string>
+    <string name="permission_notification_rationale">Notification permission is required to show tracking status.</string>
+
+    <!-- Notification -->
+    <string name="notification_channel_name">GPS Tracking</string>
+    <string name="notification_channel_desc">Shows active GPS tracking session</string>
+    <string name="notification_title">GPS Tracking Active</string>
+    <string name="notification_text">Tracking your location</string>
+
+    <!-- Buttons -->
+    <string name="start_tracking">Start Tracking</string>
+    <string name="stop_tracking">Stop Tracking</string>
+    <string name="view_history">View History</string>
+
+    <!-- Messages -->
+    <string name="tracking_started">Tracking started</string>
+    <string name="tracking_stopped">Tracking stopped</string>
+    <string name="no_sessions">No tracking sessions yet\nStart tracking to see your history</string>
+    <string name="no_location_data">No location data available</string>
+</resources>
