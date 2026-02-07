@@ -99,12 +99,25 @@ com.gpstracking
 └── SessionDetailActivity.kt
 
 
+## Google Maps API Key Setup
+
+This project does NOT include a Google Maps API key.
+
+To run the project:
+1. Create a Maps SDK for Android key in Google Cloud Console
+2. Restrict it to your app package & SHA-1
+3. Add it to `local.properties`:
+
+MAPS_API_KEY=YOUR_API_KEY
+
+The key is intentionally excluded from version control for security reasons.
 
 
 ## ScreenShots
 
+![live screen](https://github.com/user-attachments/assets/c06e9b5a-00bb-4c2f-bab6-f5e777678383)
+![home](https://github.com/user-attachments/assets/4db8107a-6a6e-47e7-899b-547b6f16098e)
+![history](https://github.com/user-attachments/assets/d5e3cbe7-5df6-4b68-a0a6-1a4af109586c)
 
-![home](https://github.com/user-attachments/assets/917eb3e1-4b47-4eb9-82ce-b09e5d2ab44c)
-![history](https://github.com/user-attachments/assets/a1b055a1-3545-4753-a240-599244294f4c)
-![live screen](https://github.com/user-attachments/assets/04fe108e-70a1-4035-874c-92d8ad1fd14c)
+
 
