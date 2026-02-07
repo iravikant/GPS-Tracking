@@ -1,8 +1,25 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     kotlin("kapt")
 }
+
+/*use if key placed in side gradle.properties*/
+/*val mapsApiKey: String = providers
+    .gradleProperty("MAPS_API_KEY")
+    .orNull ?: ""*/
+
+val localProperties = Properties()
+val localPropertiesFile = rootProject.file("local.properties")
+
+if (localPropertiesFile.exists()) {
+    localProperties.load(localPropertiesFile.inputStream())
+}
+
+val mapsApiKey: String =
+    localProperties.getProperty("MAPS_API_KEY") ?: ""
 
 
 android {
@@ -19,6 +36,8 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        manifestPlaceholders["MAPS_API_KEY"] = mapsApiKey
+
     }
 
     buildTypes {
@@ -63,9 +82,9 @@ dependencies {
     implementation(libs.androidx.room.runtime)
     kapt(libs.androidx.room.compiler)
     implementation(libs.androidx.room.ktx)
-    implementation (libs.androidx.lifecycle.runtime.ktx)
-    implementation (libs.androidx.lifecycle.viewmodel.ktx)
-    implementation (libs.kotlinx.coroutines.android)
-    implementation (libs.kotlinx.coroutines.core)
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.kotlinx.coroutines.android)
+    implementation(libs.kotlinx.coroutines.core)
     implementation(libs.androidx.localbroadcastmanager)
 }

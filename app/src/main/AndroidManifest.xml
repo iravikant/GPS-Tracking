@@ -49,7 +49,7 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyAnj9gFmQyygHMD02FXnEwbsLsoDUKUZCg" />
+            android:value="${MAPS_API_KEY}"/>
 
         <service
             android:name=".Services.LocationTrackingService"
